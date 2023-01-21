@@ -2,18 +2,30 @@
   "name": "aptus",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://aptusperu.com/tecuida/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
+    "@icon/icofont": "^1.0.1-alpha.1",
     "@next/font": "13.0.7",
+    "@react-google-maps/api": "^2.17.1",
+    "bootstrap": "^5.2.3",
+    "classnames": "^2.3.2",
     "eslint": "8.30.0",
     "eslint-config-next": "13.0.7",
+    "isotope-layout": "^3.0.6",
     "next": "13.0.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-bootstrap": "^2.7.0",
+    "react-dom": "18.2.0",
+    "react-google-maps": "^9.4.5"
+  },
+  "devDependencies": {
+    "sass": "^1.57.1"
   }
 }
