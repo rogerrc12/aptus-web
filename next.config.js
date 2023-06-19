@@ -1,11 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: "/tecuida",
+  basePath: '/tecuida',
   images: {
-    loader: "imgix",
-    path: "/",
-    formats: ["image/webp", "image/avif"],
+    loader: 'imgix',
+    path: '/',
+    formats: ['image/webp', 'image/avif'],
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback.fs = false;
+      config.resolve.fallback.tls = false;
+      config.resolve.fallback.net = false;
+      config.resolve.fallback.child_process = false;
+    }
+
+    return config;
   },
 };
 
